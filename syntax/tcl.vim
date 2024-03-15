@@ -1,13 +1,14 @@
 " Vim syntax file
 " Language:	Tcl/Tk
-" Maintainer:	Taylor Venable <taylor@metasyntax.net>
+" Maintainer:	lizi-garden <lkw1411026824@outlook.com>
+"		(previously Taylor Venable <taylor@metasyntax.net>)
 " 		(previously Brett Cannon <brett@python.org>)
 " 		(previously Dean Copsey <copsey@cs.ucdavis.edu>)
 "		(previously Matt Neumann <mattneu@purpleturtle.com>)
 "		(previously Allan Kelly <allan@fruitloaf.co.uk>)
 " Original:	Robin Becker <robin@jessikat.demon.co.uk>
-" Last Change:	2021 Nov 16
-" Version:	1.14 plus improvements from PR #8948
+" Last Change:	2024 May 12
+" Version:	1.15
 " URL:		(removed, no longer worked)
 
 " quit when a syntax file was already loaded
@@ -32,6 +33,40 @@ syn keyword tclCommand		auto_execok auto_import auto_load auto_mkindex auto_rese
 syn keyword tclCommand		auto_qualify tcl_findLibrary parray tcl_endOfWord
 syn keyword tclCommand		tcl_startOfNextWord tcl_startOfPreviousWord
 syn keyword tclCommand		tcl_wordBreakAfter tcl_wordBreakBefore
+
+" ModelSim commands
+syn keyword tclCommand          add all eval last_compile_time library_file_list proc
+syn keyword tclCommand          quit run time_now top_level vcom vlib vlog vmap vsim wave
+syn keyword tclCommand          wave_patterns wave_radices
+
+" Design Compiler commands
+syn keyword tclCommand          acs_read_hdl all_in_ex_clk all_outputs all_violators
+syn keyword tclCommand          analyze auto_wire_load_selection check_design
+syn keyword tclCommand          check_time compile compile_ultra coordinate create_clock
+syn keyword tclCommand          create_mw_design-tech_file create_placement_keepout
+syn keyword tclCommand          create_test_protocol current_design current_design
+syn keyword tclCommand          dc_shell-t dc_shell_xg-t dc_tcl-t ddc default_fanout_load
+syn keyword tclCommand          design_lib_orca dft_drc dft_drc dont_touch elaborate expr
+syn keyword tclCommand          format get_attribute get_clocks get_ports group_path hier
+syn keyword tclCommand          hold incremental incremental incremental_mapping insert_dft
+syn keyword tclCommand          invlal lib_cell lib_cell link link_library map_effort
+syn keyword tclCommand          max_tluplus mw_design_library mw_reference_library
+syn keyword tclCommand          no_design_rule noncritical_blocks only_design_rule
+syn keyword tclCommand          only_hold_time orientation period preview_dft
+syn keyword tclCommand          read_verilog remove_from_collection report_constraint
+syn keyword tclCommand          report_lib report_power report_timing scan search_path
+syn keyword tclCommand          set set_attribute set_cell_location set_clock_gating_check
+syn keyword tclCommand          set_critical_range set_dont_touch_network set_driving_cell
+syn keyword tclCommand          set_driving_cell set_input_delay set_load set_max_area
+syn keyword tclCommand          set_max_capacitance set_max_fanout set_multicycle_path
+syn keyword tclCommand          set_operating_condition set_operating_conditions
+syn keyword tclCommand          set_output_delay set_port_location set_port_side
+syn keyword tclCommand          set_power_prediction set_wire_load_mode set_wire_load_model
+syn keyword tclCommand          setup source ssc_core_slow symbol_library
+syn keyword tclCommand          synthesis synthetic_library target_library to topo
+syn keyword tclCommand          topographical_mode use_pdb_lib_format write write_milkyway
+syn keyword tclCommand          write_physical_constraints write_script
+
 
 " Global variables used by Tcl: http://www.tcl.tk/man/tcl8.6/TclCmd/tclvars.htm
 syn keyword tclVars		auto_path env errorCode errorInfo tcl_library tcl_patchLevel

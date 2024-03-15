@@ -1,0 +1,3 @@
+syn keyword tclCommand          add all eval last_compile_time library_file_list proc
+syn keyword tclCommand          quit run time_now top_level vcom vlib vlog vmap vsim wave
+syn keyword tclCommand          wave_patterns wave_radices
